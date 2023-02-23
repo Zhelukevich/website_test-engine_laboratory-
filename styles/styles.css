@@ -124,10 +124,15 @@ img {
 
 
 :root {
-  --dots-color: #FD2016;
+  --red-color: #FD2016;
   --hover: #a10800;
   --text-color: #2A2A2A;
-  --hover-text-color: #5f5f5f;
+  --hover--green: #116633;
+  --hover--blue: #175777;
+  --hover--purple: #37336e;
+  --background-color: #272727;
+  --white: #fff;
+  --black: black;
 }
 
 
@@ -154,7 +159,7 @@ body {
   content: '';
   width: 100%;
   height: 0.2rem;
-  border-bottom: 0.2rem dotted var(--dots-color);
+  border-bottom: 0.2rem dotted var(--red-color);
   -webkit-transition: .3s;
   transition: all .3s;
 }
@@ -278,7 +283,29 @@ body {
   margin-right: 0.6rem;
 }
 
+.contact__link .contact__WApp rect,
+.contact__link .contact__tg rect,
+.contact__link .contact__viber rect {
+  transition: all .3s;
+}
+
+.contact__link:hover .contact__WApp rect {
+  fill: var(--hover--green);
+  transition: all .3s;
+}
+
+.contact__link:hover .contact__tg rect {
+  fill: var(--hover--blue);
+  transition: all .3s;
+}
+
+.contact__link:hover .contact__viber rect {
+  fill: var(--hover--purple);
+  transition: all .3s;
+}
+
 .inform {
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -354,7 +381,14 @@ body {
   justify-content: space-between;
 }
 
+.nav__item {
+  height: 100%;
+}
+
 .nav-link {
+  display: flex;
+  height: 100%;
+  align-items: center;
   font-size: 1.2rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -363,4 +397,162 @@ body {
 
 .nav-link:hover {
   color: var(--hover);
+}
+
+/* MAIN */
+
+.main__block {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  padding: 18.8rem 0 0 11.5rem;
+  background-color: var(--background-color);
+  background-image: url('../images/b_g.jpg');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+}
+
+.main__title {
+  width: 101.1rem;
+  margin-bottom: 4.5rem;
+  font-weight: 400;
+  font-size: 6.5rem;
+  line-height: 9.5rem;
+  letter-spacing: 0.02em;
+  color: var(--white);
+}
+
+.main__descr {
+  margin-bottom: 4.5rem;
+  font-weight: 400;
+  font-size: 2.7rem;
+  line-height: 4.5rem;
+  letter-spacing: 0.02em;
+  color: var(--white);
+}
+
+.main__btn-block {
+  display: flex;
+  margin-bottom: 12.4rem;
+}
+
+.main__btn {
+  width: 40rem;
+  height: 10rem;
+  border-radius: 50rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  position: relative;
+  overflow-x: hidden;
+  transition: all 0.3s;
+}
+
+.main__btn:not(:last-child) {
+  margin-right: 2.2rem;
+}
+
+.main__btn .flare {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 45px;
+  transform: skewX(-45deg);
+  animation: flareAnimation;
+  left: -150%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+  animation: flareAnimation 3s infinite linear;
+}
+
+@keyframes flareAnimation {
+  0% {
+    left: -150%;
+  }
+
+  50% {
+    left: 0%;
+  }
+
+  100% {
+    left: 150%;
+  }
+}
+
+.btn-calculation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--red-color);
+}
+
+.btn-calculation svg {
+  transition: all 0.3s;
+}
+
+.btn-calculation:hover svg {
+  transform: rotate(45deg);
+}
+
+.main__btn:hover .flare {
+  opacity: 0;
+}
+
+.main__btn .flare {
+  transition: all 0.3s;
+}
+
+.btn-calculation:hover {
+  background-color: var(--hover);
+}
+
+.btn-whatsapp:hover {
+  background-color: var(--black);
+}
+
+.btn-calculation svg {
+  width: 2.3rem;
+  height: 2.3rem;
+  margin-left: 2rem;
+}
+
+.btn-whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, .45);
+  border: 1px solid var(--white);
+}
+
+.btn-whatsapp svg {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1.2rem;
+}
+
+.main__list {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.maim__item {
+  padding: 2.9rem 0 3.4rem;
+  color: var(--white);
+  font-weight: 300;
+  font-size: 1.7rem;
+  line-height: 2.7rem;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+}
+
+.maim__item b {
+  font-weight: 800;
+}
+
+.maim__item:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
 }
