@@ -1,3 +1,65 @@
+/* FONTS */
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope Light'), local('Manrope-Light'),
+    url('../fonts/Manrope-Light.woff2') format('woff2'),
+    url('../fonts/Manrope-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope Bold'), local('Manrope-Bold'),
+    url('../fonts/Manrope-Bold.woff2') format('woff2'),
+    url('../fonts/Manrope-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope Semibold'), local('Manrope-Semibold'),
+    url('../fonts/Manrope-Semibold.woff2') format('woff2'),
+    url('../fonts/Manrope-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope Medium'), local('Manrope-Medium'),
+    url('../fonts/Manrope-Medium.woff2') format('woff2'),
+    url('../fonts/Manrope-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope Regular'), local('Manrope-Regular'),
+    url('../fonts/Manrope-Regular.woff2') format('woff2'),
+    url('../fonts/Manrope-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope ExtraBold'), local('Manrope-ExtraBold'),
+    url('../fonts/Manrope-ExtraBold.woff2') format('woff2'),
+    url('../fonts/Manrope-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* RESET */
 * {
   box-sizing: inherit;
@@ -59,69 +121,23 @@ img {
   object-fit: cover;
 }
 
-/* FONTS */
-@font-face {
-  font-family: 'Manrope';
-  src: local('Manrope Light'), local('Manrope-Light'),
-    url('../fonts/Manrope-Light.woff2') format('woff2'),
-    url('../fonts/Manrope-Light.woff') format('woff');
-  font-style: 300;
-  font-style: normal;
-  font-display: swap;
-}
 
-@font-face {
-  font-family: 'Manrope';
-  src: local('Manrope ExtraBold'), local('Manrope-ExtraBold'),
-    url('../fonts/Manrope-ExtraBold.woff2') format('woff2'),
-    url('../fonts/Manrope-ExtraBold.woff') format('woff');
-  font-style: 800;
-  font-style: normal;
-  font-display: swap;
-}
+/* GLOBAL */
 
-
-@font-face {
-  font-family: 'Manrope';
-  src: local('Manrope Bold'), local('Manrope-Bold'),
-    url('../fonts/Manrope-Bold.woff2') format('woff2'),
-    url('../fonts/Manrope-Bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Manrope';
-  src: local('Manrope Semibold'), local('Manrope-Semibold'),
-    url('../fonts/Manrope-Semibold.woff2') format('woff2'),
-    url('../fonts/Manrope-Semibold.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Manrope';
-  src: local('Manrope Medium'), local('Manrope-Medium'),
-    url('../fonts/Manrope-Medium.woff2') format('woff2'),
-    url('../fonts/Manrope-Medium.woff') format('woff');
-  font-style: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Manrope';
-  src: local('Manrope Regular'), local('Manrope-Regular'),
-    url('../fonts/Manrope-Regular.woff2') format('woff2'),
-    url('../fonts/Manrope-Regular.woff') format('woff');
+body {
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 16px;
   font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+  overflow-x: hidden;
 }
 
+.container {
+  position: relative;
+  max-width: 169.3rem;
+  margin: 0 auto;
+  padding: 0 25px;
 
+}
 
 :root {
   --red-color: #FD2016;
@@ -136,23 +152,7 @@ img {
 }
 
 
-/* GLOBAL */
-
-body {
-  font-family: "Manrope", Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.container {
-  position: relative;
-  max-width: 169.3rem;
-  margin: 0 auto;
-  padding: 0 25px;
-
-}
-
-/*  */
+/* LAYOUT */
 
 .--dots {
   display: block;
@@ -401,20 +401,35 @@ body {
 
 /* MAIN */
 
+.main {
+  position: relative;
+}
+
 .main__block {
+  position: relative;
   display: flex;
   flex-direction: column;
-  width: 100vw;
   padding: 18.8rem 0 0 11.5rem;
+}
+
+.main__block::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100vw;
+  height: 100%;
   background-color: var(--background-color);
   background-image: url('../images/b_g.jpg');
   background-repeat: no-repeat;
   background-position: left center;
   background-size: cover;
+  z-index: -1;
 }
 
 .main__title {
   width: 101.1rem;
+  margin: 0;
   margin-bottom: 4.5rem;
   font-weight: 400;
   font-size: 6.5rem;
@@ -533,26 +548,107 @@ body {
 }
 
 .main__list {
-  position: absolute;
-  bottom: 0;
   display: flex;
   justify-content: space-between;
+  flex-basis: 0;
+  flex-grow: 0;
 }
 
-.maim__item {
+.main__item {
+  position: relative;
   padding: 2.9rem 0 3.4rem;
-  color: var(--white);
   font-weight: 300;
   font-size: 1.7rem;
   line-height: 2.7rem;
   letter-spacing: 0.02em;
-  color: #FFFFFF;
+  color: var(--white);
 }
 
-.maim__item b {
+.main__item b {
   font-weight: 800;
 }
 
-.maim__item:not(:last-child) {
+.main__item svg {
+  position: absolute;
+  top: 0;
+  width: 1.32rem;
+  height: 0.96rem;
+}
+
+.main__item:not(:last-child) {
   border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.main__item:nth-child(2),
+.main__item:nth-child(3) {
+  padding: 2.9rem 9.5rem 3.4rem 9.5rem;
+}
+
+.main__item:nth-child(4) {
+  padding-left: 9.5rem;
+}
+
+.main__item:nth-child(1) {
+  padding-right: 9.5rem;
+}
+
+/* scroll-down */
+
+.scroll-down {
+  position: absolute;
+  width: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+  left: 6.8rem;
+}
+
+.scroll-down__title {
+  padding-top: 3.8rem;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.1em;
+  color: #EFEFEF;
+}
+
+.scroll-down__line {
+  display: block;
+  width: 0.15rem;
+  height: 48.8rem;
+  margin-bottom: 3.8rem;
+  background-color: #EFEFEF;
+}
+
+.scroll-down__link svg {
+  width: 1.837rem;
+  height: 3.2rem;
+}
+
+.scroll-down__link svg path:last-child {
+  transform: translateY(0);
+  animation: popup;
+  animation: popup 1s infinite linear;
+}
+
+@keyframes popup {
+  0% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(5px);
+  }
+
+  60% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
 }
