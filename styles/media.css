@@ -722,4 +722,81 @@
     font-weight: 700;
   }
 
+  .popup__body {
+    top: 0;
+    width: 32rem;
+    min-height: 60rem;
+    padding: 5rem 2rem 3rem;
+    min-height: 30rem;
+  }
+
+
+  .popup__closes {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .popup__closes svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .popup__title {
+    margin-bottom: 1.1rem;
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  .popup__descr {
+    margin-bottom: 1rem;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+
+  .form__item.tel {
+    margin-bottom: 1rem;
+  }
+
+  .tel__label {
+    padding-left: 0rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.1rem;
+    text-align: center;
+  }
+
+  .tel__input {
+    height: 5rem;
+    padding: 0 2rem;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .tel__input::placeholder {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .form__btn {
+    height: 5rem;
+    margin-bottom: 2rem;
+    border-radius: 5rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .checkbox__label {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    color: var(--white);
+    padding-left: 3rem;
+    cursor: pointer;
+  }
+
 }
