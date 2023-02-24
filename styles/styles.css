@@ -252,6 +252,7 @@ body {
 
 .header__item.location {
   position: relative;
+  z-index: 5;
 }
 
 .location__map {
@@ -287,10 +288,11 @@ body {
   height: 8rem;
   left: -5rem;
   cursor: pointer;
+  z-index: -1;
 }
 
 
-.location:hover .location__map {
+.location:hover>.location__map {
   display: block;
   opacity: 1;
 }
@@ -453,7 +455,7 @@ body {
   position: sticky;
   top: 0;
   background-color: var(--white);
-  z-index: 1000;
+  z-index: 4;
   transition: transform .4s, opacity .4s;
 }
 
