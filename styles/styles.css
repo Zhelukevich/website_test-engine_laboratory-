@@ -250,6 +250,19 @@ body {
   color: var(--text-color);
 }
 
+.header__item.location {
+  position: relative;
+}
+
+.location__map {
+  position: absolute;
+  top: 5rem;
+  left: -14rem;
+  display: none;
+  opacity: 0;
+  z-index: 5000;
+}
+
 .location__icon {
   width: 1.2rem;
   height: 1.5rem;
@@ -264,6 +277,20 @@ body {
   color: var(--text-color);
   letter-spacing: 0.05em;
   transition: all .3s;
+}
+
+.location::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 40rem;
+  height: 45rem;
+  left: -14rem;
+}
+
+.location:hover .location__map {
+  display: block;
+  opacity: 1;
 }
 
 

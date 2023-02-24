@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="./styles/styles.css">
   <link rel="stylesheet" href="./styles/media.css">
   <script defer src="./js/inputmask.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
   <script defer src="./js/main.js"></script>
 </head>
 
@@ -42,10 +43,11 @@
               fill="#FD2016" />
           </svg>
           <a class="location__link" target="_blank"
-            href="https://yandex.by/maps/213/moscow/house/shosseyny_proyezd_s4a_3/Z04YcQdoSkABQFtvfXtxd3RgYw==/?ll=37.708356%2C55.706837&z=16">Смотреть
-            на карте
+            href="https://yandex.by/maps/213/moscow/house/shosseyny_proyezd_s4a_3/Z04YcQdoSkABQFtvfXtxd3RgYw==/?ll=37.708356%2C55.706837&z=16">
+            Смотретьна карте
             <span class="--dots"></span>
           </a>
+          <div class="location__map" id="map" style="width: 40rem; height: 40rem"></div>
         </div>
 
         <div class="header__item calculator">

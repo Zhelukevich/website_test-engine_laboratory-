@@ -78,4 +78,25 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
+  // MAP
+  ymaps.ready(init);
+  function init() {
+
+    var myMap = new ymaps.Map("map", {
+      center: [55.706862647574695, 37.70940851719666],
+      zoom: 17
+    }, {
+      searchControlProvider: 'yandex#search'
+    });
+
+    var myGeoObject = new ymaps.GeoObject({
+      geometry: {
+        type: "Point",
+        coordinates: [55.706862647574695, 37.70940851719666]
+      }
+    });
+
+    myMap.geoObjects.add(myGeoObject)
+  }
+
 })
